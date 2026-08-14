@@ -1,0 +1,49 @@
+import discord
+
+from discord import app_commands
+from discord.ext import commands
+
+from library.music.instances import get_player
+
+def setup(bot: commands.bot.Bot):
+    @bot.tree.command(
+        name="pause",
+        description="Pause The Music"
+    )
+    @app_commands.allowed_installs(
+        guilds=True,
+        users=False
+    )
+    @app_commands.allowed_contexts(
+        guilds=True,
+        dms=False,
+        private_channels=False
+    )
+    async def pause(interaction: discord.Interaction):
+        await interaction.response.defer()
+
+        player = get_player(interaction.guild, bot)
+        player.pause()
+
+        await interaction.followup.send("## MUSIC PAUSED!")
+
+    @bot.tree.command(
+        name="resume",
+        description="Resume The Music"
+    )
+    @app_commands.allowed_installs(
+        guilds=True,
+        users=False
+    )
+    @app_commands.allowed_contexts(
+        guilds=True,
+        dms=False,
+        private_channels=False
+    )
+    async def resume(interaction: discord.Interaction):
+        await interaction.response.defer()
+
+        player = get_player(interaction.guild, bot)
+        player.resume()
+
+        await interaction.followup.send("## MUSIC RESUMED!")

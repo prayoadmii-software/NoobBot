@@ -1,0 +1,13 @@
+discord.py
+discord.py[voice]
+PyNaCl
+yt-dlp
+requests
+psutil
+colorama
+gTTS
+langdetect
+pillow
+tflink
+deep-translator
+mcstatus
