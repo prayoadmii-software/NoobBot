@@ -67,17 +67,21 @@ class MusicPlayer:
             added = 0
             for entry in entries:
                 url = entry.get("webpage_url") or entry.get("url")
+
                 if not url:
                     continue
 
                 await self.queue.put(url)
+
                 added += 1
 
             console.log(f"Added {str(added)} Track(s) To Queue In {self.guild.name}")
+
             return f"{str(added)} Track(s)"
 
         except Exception as e:
             console.warn(f"Error Adding Song Or Playlist As: {e}")
+
             return 0
 
     async def player_loop(self):
@@ -90,10 +94,12 @@ class MusicPlayer:
                     continue
 
                 self.current_query = query
+
                 try:
                     song = await YTDLSource.create(query)
                 except Exception as e:
                     console.error(f"Failed To Create Music Source As: {e}")
+
                     continue
 
                 if not self.voice or not self.voice.is_connected():
@@ -104,7 +110,7 @@ class MusicPlayer:
                 if self.text_channel:
                     try:
                         if self.queue.loop_mode != "2":
-                            await self.text_channel.send(f"Now I'm Playing: **{song.title}**", silent=True)
+                            await self.text_channel.send(f"Now I'm Playing: `{song.title}`", silent=True)
                     except Exception as e:
                         console.warn(f'Cannot Sent "Now Playing" Message During An Error As {e}')
                     try:
@@ -122,6 +128,7 @@ class MusicPlayer:
 
             if self.text_channel:
                 asyncio.run_coroutine_threadsafe(self.text_channel.send("An Error Occurred While Try To Play!", silent=True), self.bot.loop)
+
             return
 
         if self.queue.loop_mode == "2":
