@@ -7,7 +7,7 @@ from discord import app_commands
 from discord.ext import commands
 
 from library.core.helpmodule import textfilter
-from library.core import console
+from prayoadmii_lib import console
 from library.core.cmdhelpermodule import googttshelper as tts
 from library.core.cmdhelpermodule import gifcreator
 from library.core.helpmodule.randomtextcreator import GetRandomText

@@ -2,7 +2,7 @@ import discord
 
 from typing import Iterable, Optional, Union
 
-from library.core import console
+from prayoadmii_lib import console
 
 def CheckNeedPermission(targetchannel: discord.abc.GuildChannel, neededpermission: Union[Iterable[str], discord.Permissions], interaction: Optional[discord.Interaction] = None, bot: Optional[Union[discord.Client, discord.ext.commands.Bot]] = None) -> bool:
     if interaction is None and bot is None:

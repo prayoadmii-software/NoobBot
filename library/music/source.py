@@ -2,7 +2,7 @@ import yt_dlp
 import asyncio
 import discord
 
-from library.core import console
+from prayoadmii_lib import console
 
 
 YTDL_OPTIONS = {

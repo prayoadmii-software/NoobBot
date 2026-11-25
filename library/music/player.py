@@ -3,7 +3,7 @@ import asyncio
 
 from library.music.queue import SongQueue
 from library.music.source import YTDLSource
-from library.core import console
+from prayoadmii_lib import console
 
 class MusicPlayer:
     def __init__(self, guild, bot):

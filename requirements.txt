@@ -11,3 +11,4 @@ pillow
 tflink
 deep-translator
 mcstatus
+prayoadmii-lib

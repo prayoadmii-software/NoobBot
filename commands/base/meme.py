@@ -8,7 +8,7 @@ from discord import app_commands
 from library.core.helpmodule.randomtextcreator import GetRandomText
 from library.core.helpmodule import textfilter
 from library.core.cmdhelpermodule import memeimagecreator as memeedit
-from library.core import console
+from prayoadmii_lib import console
 
 def setup(bot: commands.bot.Bot):
     @bot.tree.command(

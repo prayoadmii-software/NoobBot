@@ -2,7 +2,7 @@ import requests
 
 from urllib.parse import quote_plus
 
-from library.core import console
+from prayoadmii_lib import console
 
 api = "https://www.purgomalum.com/service/json?text={text}&fill_char=_"
 

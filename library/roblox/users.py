@@ -1,6 +1,6 @@
 import requests
 
-from library.core import console
+from prayoadmii_lib import console
 
 RO_USER_SEARCH_API = "https://users.roblox.com/v1/users/search"
 RO_USER_INFO_API = "https://users.roblox.com/v1/users/"

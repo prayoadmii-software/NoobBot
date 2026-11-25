@@ -1,6 +1,6 @@
 import requests
 
-from library.core import console
+from prayoadmii_lib import console
 
 GAME_ICON = "https://thumbnails.roblox.com/v1/games/icons?universeIds={universe_id}&size=512x512&format=Png"
 UNIVERSE_FROM_PLACE = "https://apis.roblox.com/universes/v1/places/{place_id}/universe"

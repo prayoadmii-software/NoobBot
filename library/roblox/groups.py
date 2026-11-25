@@ -1,6 +1,6 @@
 import requests
 
-from library.core import console
+from prayoadmii_lib import console
 
 RO_GROUP_API = "https://groups.roblox.com/v2/groups?groupIds={g_id}"
 RO_USER_INFO_API = "https://users.roblox.com/v1/users/"

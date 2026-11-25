@@ -8,7 +8,7 @@ from discord.ext import commands
 import botconfig as config
 import projectconfig as pconf
 
-from library.core import console
+from prayoadmii_lib import console
 from library.music.instances import get_player
 
 

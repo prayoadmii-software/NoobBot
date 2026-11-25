@@ -1,5 +1,5 @@
 from library.music.player import MusicPlayer
-from library.core import console
+from prayoadmii_lib import console
 
 players = {}
 

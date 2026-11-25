@@ -5,7 +5,7 @@ import os
 from PIL import Image, ImageDraw, ImageFont
 
 from library.core.helpmodule.randomtextcreator import GetRandomText
-from library.core import console
+from prayoadmii_lib import console
 
 import botconfig as config
 

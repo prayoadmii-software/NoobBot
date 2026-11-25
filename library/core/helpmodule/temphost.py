@@ -1,7 +1,7 @@
 import tflink
 import os
 
-from library.core import console
+from prayoadmii_lib import console
 from library.core.helpmodule.randomtextcreator import GetRandomText
 
 def ConvertFileIntoLink(input_file: str, remove: bool = False):

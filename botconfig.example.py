@@ -23,7 +23,7 @@ AppName = "Noob Bot"
 
 # Others Info
 # Team, Community, Or Owner Name Of The Bot Used To Name Bot Temp Folder
-BotOwnerTeam = "Noob's Studio Creations!"
+BotOwnerTeam = "PrayoadMii's Software"
 # Discord User ID Of Bot Owner - Default Is Me (prayoadmii)
 BotOwnerID = 1333963468306645012
 
